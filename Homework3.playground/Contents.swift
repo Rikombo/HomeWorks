@@ -10,7 +10,7 @@ import UIKit
 
 let deposit: Float = 1000.00
 let interestRate: Float = 0.025
-let period: Int = 5
+let period: Int = 2
 var profit: Float = 0
 
 for _ in 1...period {
@@ -30,7 +30,7 @@ print("Amount of income after \(period) years will be \(profit) EUR. My total de
  */
 
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-var evenNumbers = [Int]()
+var evenNumbers: [Int] = []
 
 for number in array {
     if number % 2 == 0 {
@@ -57,6 +57,14 @@ for _ in 1...10 {
     }
 }
 
+var numberToCheck = 5
+var shuffleCounts = 0
+
+while numberToCheck != 5 {
+    numberToCheck = Int.random(in: 1...10)
+    shuffleCounts += 1
+}
+print("Number 5 will be after \(counter) shuffles")
 
 /*
  Exercise 4
@@ -79,3 +87,20 @@ while currentHeight < postHeight {
 }
 
 print("Bug will spend \(numberOfDays) days to reach top of the post")
+
+var distance = 0
+numberOfDays = 0
+var isDay = true
+
+while distance != 10 {
+    if isDay {
+        distance += 2
+        numberOfDays += 1
+        isDay = false
+    } else {
+        distance -= 1
+        isDay = true
+    }
+}
+
+print(numberOfDays)
