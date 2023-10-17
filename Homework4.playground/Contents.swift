@@ -89,13 +89,13 @@ print(array)
  It should be 1/2 of createArray and started from [1,3,5.....
  */
 
-for number in array.reversed() {
-    if isEvenNumber(number),
-       let index = array.firstIndex(of: number) {
+for numbers in array.reversed() {
+    if isEvenNumber(numbers),
+       let index = array.firstIndex(of: numbers) {
         array.remove(at: index)
     }
 }
 
 print(array)
-
+array.removeAll(where: isEvenNumber)
 
